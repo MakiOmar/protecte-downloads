@@ -1,0 +1,7 @@
+#deny from all
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^.*/wp-content/uploads/protected-downloads/.*$ [NC]
+RewriteRule \.(gif|jpe?g|png|mp4)$ - [F,L]
+</IfModule>
